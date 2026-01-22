@@ -18,7 +18,7 @@
 #define TER_ADC 2
 #define AMB_DHT 4
 
-#define debug 0
+#define debug 1
 
 static const uint8_t amb_sym[8] = {0b00000100,
                                    0b00000100,
@@ -76,8 +76,10 @@ void lcd_config()
 
 void dht_task(void *pvParameters)
 {
+    gpio_set_pull_mode(AMB_DHT, GPIO_PULLUP_ONLY);
     while (1)
     {
+        // dht_read_float_data(DHT_TYPE_AM2301, AMB_DHT, NULL, &amb_tem);
         ESP_ERROR_CHECK(dht_read_float_data(DHT_TYPE_AM2301, AMB_DHT, NULL, &amb_tem));
         vTaskDelay(pdMS_TO_TICKS(2000));
     }
