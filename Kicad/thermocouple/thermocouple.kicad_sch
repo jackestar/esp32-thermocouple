@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "2791aeac-cc72-4a40-9ceb-392216917b44")
 	(paper "USLetter")
+	(title_block
+		(title "Thermocouple")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Instrumentation:AD620"
 			(pin_names
