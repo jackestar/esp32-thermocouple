@@ -1,0 +1,1 @@
+[TC33X-2-103E](https://componentsearchengine.com/part-view/TC33X-2-103E/Bourns) (or equivalent footprint)
